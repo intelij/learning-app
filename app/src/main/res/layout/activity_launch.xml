@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/launch_bckgr_3" />
+
+    <RelativeLayout
+        android:id="@+id/root_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:splitMotionEvents="false">
+
+        <ImageView
+            android:id="@+id/stepic_logo"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/stepic_logo" />
+
+        <RelativeLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="40dp">
+
+            <Button
+                android:id="@+id/sign_in_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/min_ux_touchable_size"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="25dp"
+                android:contentDescription="@string/app_name"
+                android:maxWidth="@dimen/min_max_width_for_tablets"
+                android:minWidth="@dimen/min_max_width_for_tablets"
+                android:text="@string/sign_in" />
+
+            <TextView
+                android:id="@+id/sign_up_btn_activity_launch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sign_in_tv"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:linksClickable="true"
+                android:padding="5dp"
+                android:text="@string/yet_have_not_account"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</merge>

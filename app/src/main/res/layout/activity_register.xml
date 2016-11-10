@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/root_view"
+                android:focusableInTouchMode="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/panel_custom_action_bar"/>
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:id="@+id/registrationLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_registration_left_right"
+            android:orientation="vertical"
+            android:paddingEnd="@dimen/padding_registration_left_right"
+            android:paddingLeft="@dimen/padding_registration_left_right"
+            android:paddingRight="@dimen/padding_registration_left_right"
+            android:paddingStart="@dimen/padding_registration_left_right"
+            >
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/first_name_reg_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/half_padding"
+                android:paddingTop="@dimen/half_padding">
+
+                <EditText
+                    android:id="@+id/first_name_reg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/first_name"
+                    android:imeOptions="flagNoFullscreen|actionNext"
+                    android:inputType="textPersonName|textAutoCorrect|textCapWords"
+                    android:maxLength="100"
+                    android:singleLine="true"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/second_name_reg_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/half_padding"
+                android:paddingTop="@dimen/half_padding">
+
+                <EditText
+                    android:id="@+id/second_name_reg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/second_name"
+                    android:imeOptions="flagNoFullscreen|actionNext"
+                    android:inputType="textPersonName|textAutoCorrect|textCapWords"
+                    android:maxLength="100"
+                    android:singleLine="true"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/email_reg_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/half_padding"
+                android:paddingTop="@dimen/half_padding">
+
+                <AutoCompleteTextView
+                    android:id="@+id/email_reg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/email"
+                    android:imeOptions="flagNoFullscreen|actionNext"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="100"
+                    android:singleLine="true"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/password_reg_wrapper"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/half_padding"
+                android:paddingTop="@dimen/half_padding">
+
+                <EditText
+                    android:id="@+id/password_reg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/password_hint"
+                    android:imeOptions="flagNoFullscreen|actionSend"
+                    android:inputType="textPassword"
+                    android:maxLength="@integer/max_length_of_password"
+                    android:maxLines="1"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/sign_up_btn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/min_ux_touchable_size"
+                android:layout_marginBottom="50dp"
+                android:text="@string/sign_up"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

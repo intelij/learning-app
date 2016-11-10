@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/stepic_white"
+    android:clickable="true"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    android:foreground="@drawable/non_radius_foreground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="@dimen/guideline_left_right_padding_list_item">
+
+            <RelativeLayout
+                android:id="@+id/course_info_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:textSize="@dimen/text_header"
+                    android:id="@+id/section_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|start"
+                    android:layout_marginBottom="2dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingRight="8dp"
+                    tools:text="1. Section Section"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/section_title"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/start_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="start date"
+                        android:textColor="@color/stepic_weak_text"
+                        android:textSize="@dimen/text_height" />
+
+                    <TextView
+                        android:id="@+id/soft_deadline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="soft deadline date"
+                        android:textColor="@color/stepic_weak_text"
+                        android:textSize="@dimen/text_height" />
+
+                    <TextView
+                        android:id="@+id/hard_deadline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="hard deadline date"
+                        android:textColor="@color/stepic_weak_text"
+                        android:textSize="@dimen/text_height" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <include layout="@layout/load_imageview"/>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/grey_bar"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/silver" />
+    </LinearLayout>
+
+</FrameLayout>

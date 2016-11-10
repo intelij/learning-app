@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbarStyle="outsideOverlay">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            style="@style/SettingCardStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/fragment_settings_wifi_title"
+                    style="@style/SettingHeaderTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/video_title"/>
+
+                <org.stepic.droid.ui.custom.BetterSwitch
+                    android:id="@+id/fragment_settings_external_player_switch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/open_in_external_player"
+                    android:foreground="@drawable/non_radius_foreground"
+                    android:padding="16dp"
+                    android:text="@string/open_in_external_player"
+                    android:textColor="@color/stepic_regular_text"
+                    android:textSize="16sp"/>
+
+                <org.stepic.droid.ui.custom.BetterSwitch
+                    android:id="@+id/fragment_settings_wifi_enable_switch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/wi_fi_setting"
+                    android:foreground="@drawable/non_radius_foreground"
+                    android:padding="16dp"
+                    android:text="@string/wi_fi_setting"
+                    android:textColor="@color/stepic_regular_text"
+                    android:textSize="16sp"/>
+
+                <FrameLayout
+                    android:id="@+id/video_quality_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="@drawable/non_radius_foreground"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/video_quality"
+                            android:textSize="16sp"/>
+
+                        <TextView
+                            android:id="@+id/current_quality"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/stepic_weak_text"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+                </FrameLayout>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            style="@style/SettingCardStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/fragment_settings_notification_title"
+                    style="@style/SettingHeaderTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/notification_title"/>
+
+                <org.stepic.droid.ui.custom.BetterSwitch
+                    android:id="@+id/fragment_settings_notification_sound_switch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/notification_learn_list"
+                    android:foreground="@drawable/non_radius_foreground"
+                    android:padding="16dp"
+                    android:text="@string/sound_title"
+                    android:textColor="@color/stepic_regular_text"
+                    android:textSize="16sp"/>
+
+
+                <org.stepic.droid.ui.custom.BetterSwitch
+                    android:id="@+id/fragment_settings_notification_vibration_switch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/notification_learn_list"
+                    android:foreground="@drawable/non_radius_foreground"
+                    android:padding="16dp"
+                    android:text="@string/vibration_title"
+                    android:textColor="@color/stepic_regular_text"
+                    android:textSize="16sp"/>
+
+                <org.stepic.droid.ui.custom.BetterSwitch
+                    android:id="@+id/fragment_settings_notification_learn_switch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/notification_learn_list"
+                    android:foreground="@drawable/non_radius_foreground"
+                    android:padding="16dp"
+                    android:text="@string/notification_learn_list"
+                    android:textColor="@color/stepic_regular_text"
+                    android:textSize="16sp"/>
+
+                <org.stepic.droid.ui.custom.BetterSwitch
+                    android:id="@+id/fragment_settings_notification_comment_switch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/notification_comment_list"
+                    android:foreground="@drawable/non_radius_foreground"
+                    android:padding="16dp"
+                    android:text="@string/notification_comment_list"
+                    android:textColor="@color/stepic_regular_text"
+                    android:textSize="16sp"/>
+
+                <org.stepic.droid.ui.custom.BetterSwitch
+                    android:id="@+id/fragment_settings_notification_review_switch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/reviews_title"
+                    android:foreground="@drawable/non_radius_foreground"
+                    android:padding="16dp"
+                    android:text="@string/reviews_title"
+                    android:textColor="@color/stepic_regular_text"
+                    android:textSize="16sp"/>
+
+                <org.stepic.droid.ui.custom.BetterSwitch
+                    android:id="@+id/fragment_settings_notification_teaching_switch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/teaching_title"
+                    android:foreground="@drawable/non_radius_foreground"
+                    android:padding="16dp"
+                    android:text="@string/teaching_title"
+                    android:textColor="@color/stepic_regular_text"
+                    android:textSize="16sp"/>
+
+
+                <org.stepic.droid.ui.custom.BetterSwitch
+                    android:id="@+id/fragment_settings_notification_other_switch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/other_title"
+                    android:foreground="@drawable/non_radius_foreground"
+                    android:padding="16dp"
+                    android:text="@string/other_title"
+                    android:textColor="@color/stepic_regular_text"
+                    android:textSize="16sp"/>
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            style="@style/SettingCardStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/fragment_settings_calendar_title"
+                    style="@style/SettingHeaderTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/calendar_title"/>
+
+                <org.stepic.droid.ui.custom.BetterSwitch
+                    android:id="@+id/fragment_settings_calendar_widget_switch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/calendar_setting_description"
+                    android:foreground="@drawable/non_radius_foreground"
+                    android:padding="16dp"
+                    android:text="@string/calendar_setting_description"
+                    android:textColor="@color/stepic_regular_text"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            style="@style/SettingCardStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/SettingHeaderTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/storage"/>
+
+                <FrameLayout
+                    android:id="@+id/storage_management_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="@drawable/non_radius_foreground"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/space_management_title"
+                        android:textSize="16sp"/>
+                </FrameLayout>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            style="@style/SettingCardStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/SettingHeaderTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/other_title"/>
+
+                <org.stepic.droid.ui.custom.BetterSwitch
+                    android:id="@+id/fragment_settings_discounting_policy_switch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/discounting_policy_title_settings"
+                    android:foreground="@drawable/non_radius_foreground"
+                    android:padding="16dp"
+                    android:text="@string/discounting_policy_title_settings"
+                    android:textColor="@color/stepic_regular_text"
+                    android:textSize="16sp"/>
+
+                <org.stepic.droid.ui.custom.BetterSwitch
+                    android:id="@+id/fragment_settings_keep_screen_on_switch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/keep_screen_on_title_settings"
+                    android:foreground="@drawable/non_radius_foreground"
+                    android:padding="16dp"
+                    android:text="@string/keep_screen_on_title_settings"
+                    android:textColor="@color/stepic_regular_text"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>
